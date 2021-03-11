@@ -6,7 +6,7 @@
 <body>
 	<center>
 	<h1>เครื่องคำนวณวงกลมและทรงกลม</h1>
-	<div style="position: ">
+	<div>
 	<form action="" method="GET">
 	<label for = "raduis">รัศมี : </label>
 	<input type="input" name="raduis" id="raduis"><br>
