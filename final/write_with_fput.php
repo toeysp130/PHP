@@ -12,7 +12,7 @@
     $link[] = "http://www.yahoo.com"; 
     $link[] = "http://www.hotmail.com"; 
     $fp = fopen("link.html","w"); 
-    for($i = 0; $link[$i] != "" ; $i++) {
+    for($i = 0; $i < count($link) ; $i++) {
         $data = "<a href = '$link[$i]'>".$link[$i]."</a><br>\n";
         fputs($fp, $data); 
     }
