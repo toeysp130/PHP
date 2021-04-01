@@ -1,6 +1,6 @@
 <?php
 // Create connection
-$connect = new mysqli('ชื่อเครื่องแม่ข่าย', 'ชื่อผู้เข้าใช้', 'รหัสผ่าน', 'ฐานข้อมูล');
+$connect = new mysqli('localhost', 'root', '', 'itbook');
 // Check Connection
 if ($connect->connect_error) {
 die("Something wrong.: " . $connect->connect_error);
@@ -30,12 +30,12 @@ $result = $connect->query($sql);
 <tbody>
 <?php while($row = $result->fetch_assoc()): ?>
 <tr>
-<td><?php echo $row['BookID']; ?></td>
+<td><?php echo $row['book_id']; ?></td>
 <td class="name">
-<?php echo $row['BookName'];?>
+<?php echo $row['book_name'];?>
 </td>
 
-<td><?php echo $row['UnitPrice']; ?></td>
+<td><?php echo $row['unit_price']; ?></td>
 
 </tr>
 <?php endwhile ?>
