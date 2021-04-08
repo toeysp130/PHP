@@ -1,3 +1,10 @@
+<?php 
+    $array_detail = array(array("Accord",1799000 ,2.00),
+                          array("Civic",1145000,2.00),
+                          array("Jazz",754000,4.00),
+                          array("City",749000,4.00));
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,11 +22,11 @@
             <tr >
                 <td> 
                     เลือกรุ่นรถยนต์ 
-                    <select name=  "car">
-                        <option value="Accord">Accord</option>
-                        <option value="Civic">Civic</option>
-                        <option value="Jazz">Jazz</option>
-                        <option value="City">City</option>
+                    <select name="car">
+                        <option value="accord">Accord</option>
+                        <option value="civic">Civic</option>
+                        <option value="jazz">Jazz</option>
+                        <option value="city">City</option>
                     </select>
                     <input type="submit" value="Submit">
                 </td>
@@ -47,60 +54,66 @@
                     <img src="Pic/Accord.png" alt="" width="50%">
                 </td>
                 <td>
-                    Accord
+                    <?php echo $array_detail[0][0]; ?>
                 </td>
                 <td>
-                    1,799,000
+                    <?php echo number_format($array_detail[0][1],);?>
                 </td>
                 <td>
-                    2.00
-                </td>
-            </tr>
-            <tr align="center">
-                <td>
-                    <img src="Pic/Civic.png" alt="" width="50%">
-                </td>
-                <td>
-                    Civic
-                </td>
-                <td>
-                    1,145,000
-                </td>
-                <td>
-                    2.00
+                    <?php echo number_format((float)$array_detail[0][2],2);?>
+                    
                 </td>
             </tr>
             <tr align="center">
                 <td>
-                    <img src="Pic/Jazz.png" alt="" width="50%">
+                    <img src="Pic/Civic.png" alt="" width="70%">
                 </td>
                 <td>
-                    Jazz
+                    <?php echo $array_detail[1][0]; ?>
                 </td>
                 <td>
-                    754,000
+                    <?php echo number_format($array_detail[1][1],);?>
                 </td>
                 <td>
-                    4.00
+                    <?php echo number_format((float)$array_detail[1][2],2);?>
+                    
                 </td>
             </tr>
             <tr align="center">
                 <td>
-                    <img src="Pic/City.png" alt="" width="50%">
+                    <img src="Pic/Jazz.png" alt="" width="60%">
                 </td>
                 <td>
-                    city
+                    <?php echo $array_detail[2][0]; ?>
                 </td>
                 <td>
-                    749,000
+                    <?php echo number_format($array_detail[2][1],);?>
                 </td>
                 <td>
-                    4.00
+                    <?php echo number_format((float)$array_detail[2][2],2);?>
+                    
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <img src="Pic/City.png" alt="" width="70%"> 
+                </td>
+                <td>
+                    <?php echo $array_detail[3][0]; ?>
+                </td>
+                <td>
+                    <?php echo number_format($array_detail[3][1],);?>
+                </td>
+                <td>
+                    <?php echo number_format((float)$array_detail[3][2],2);?>
+                    
                 </td>
             </tr>
         
             </table>
         </fieldset>
+
+        <input type="text" name="arr" value="$array_detail[][]" hidden >
     </form>
 </body>
 </html>
