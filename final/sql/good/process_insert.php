@@ -1,8 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "12345";
-$dbname = "departmentstore";
+include 'condb.php';
 $id = $_POST['id'];
 $name = $_POST['name'];
 $price = $_POST['price'];
@@ -22,5 +19,5 @@ if ($conn->multi_query($sql) === TRUE) {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 $conn->close();
-header("Location: add_good.php");
+header("Location: show_good.php");
 ?>

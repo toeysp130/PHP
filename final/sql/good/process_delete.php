@@ -5,8 +5,7 @@
     $gq = $_GET['gq'];
 
     include 'condb.php';
-    $sql = "UPDATE goods SET goosid ='$id',goodsName ='$name',goodsPrice='$pr ',goodQuantity='$gq' WHERE goosid = '$id' ";
-    //UPDATE goods SET goosid ='$id',goodsName ='$name',goodsPrice='$pr ',goodQuantity='$gq' WHERE 1
+    $sql = "DELETE FROM goods WHERE goosid = '$id'";
     $result = mysqli_query($conn,$sql);
     $conn->close();
     header("Location: show_good.php");

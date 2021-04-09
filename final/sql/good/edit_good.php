@@ -58,8 +58,8 @@
        </tr>
     </table>
     <br>
-    <input type="submit"  value="Edit">
-    <input type="reset"  value="Clear">
+    <input type="submit" value="Edit">
+    <input type="reset" value="Clear">
 </form>
 </center>
 </body>

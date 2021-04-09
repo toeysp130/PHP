@@ -72,7 +72,7 @@
                     <a href="edit_good.php?id=<?php echo $rs[0] ?>">[Edit]</a>
                 </td>
                 <td id = de>
-                    <a href="edit_good.php?id=<?php echo $rs[0] ?>">[Delete]</a>
+                    <a href="process_delete.php?id=<?php echo $rs[0] ?>">[Delete]</a>
                 </td>
             </tr>
             <?php $row++;}
