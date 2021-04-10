@@ -7,13 +7,35 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="get"></form>
-    <table>
+<center>
+    <form action="process_login.php" method="POST">
+    <table border="1" >
         <tr>
-            <td colspan="2">
-            
+            <td colspan="2" align="center">
+                Login Department Store
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Username
+            </td>
+            <td>
+                <input type="text" name="username" id="">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Password
+            </td>
+            <td>
+                <input type="password" name="password" id="">
             </td>
         </tr>
     </table>
+    <br>
+    <input type="submit" value="Login" >
+    <input type="reset" value="cancel">
+    </form>
+</center>
 </body>
 </html>
