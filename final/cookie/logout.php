@@ -1,6 +1,6 @@
 <?php 
-    session_start();
-    session_destroy();
-    echo "You have successfully logged out";
+    setcookie("employeeUsername","",time()-3600);
+    setcookie("employeePassword","",time()-3600);
+    setcookie("employeePermision","",time()-3600);
     header("location:login.php");
 ?>
