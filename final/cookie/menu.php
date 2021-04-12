@@ -1,8 +1,8 @@
 <?php 
-    session_start();
-    $employeeUsername = $_SESSION['employeeUsername'];
-    $employeePassword = $_SESSION['employeePassword'];
-    $employeePermision = $_SESSION['employeePermision'];
+    
+    $employeeUsername = $_COOKIE['employeeUsername'];
+    $employeePassword = $_COOKIE['employeePassword'];
+    $employeePermision = $_COOKIE['employeePermision'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,6 +23,7 @@
             echo '<h1><a href="" onclick="return confirm (\''.$employeeUsername.'No permision to view page2.php\')">Page2</a></h1>';
         } ?>
         <h1><a href="logout.php">Logout</a></h1>
+        
     </center>
 </body>
 </html>
