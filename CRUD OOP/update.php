@@ -1,7 +1,6 @@
 <?php 
     include_once('function.php');
     $updateuser = new DB_con();
-
     if(isset($_POST['update'])){
         $userid = $_GET['id'];
         $fname = $_POST['firstname'];

@@ -8,7 +8,6 @@
             if(mysqli_connect_errno()){
                 echo "Failed to connect to MySQL : ". mysqli_connect_error();
             }
-            
         }
         public function insert($firstname,$lastname,$email,$phonenumber,$address){
             $result = mysqli_query($this->dbcon,"INSERT INTO tbluser(firstname,lastname,email,phonenumber,address) 

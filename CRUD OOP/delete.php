@@ -1,6 +1,5 @@
 <?php
     include_once('function.php');
-
     if(isset($_GET['del'])){
         $userid = $_GET['del'];
         $deletedata = new DB_con();

@@ -2,7 +2,6 @@
     include_once('function.php');
 
     $insertdata = new DB_con();
-    
     if(isset($_POST['insert'])) {
         $fname = $_POST['firstname'];
         $lname = $_POST['lastname'];
