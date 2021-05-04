@@ -49,7 +49,6 @@
             </td>
         </tr>
     <?php $row++;}?>
-        
     </table>
     <button><a href="input.php">เพิ่มข้อมูล</a></button>
 </body>

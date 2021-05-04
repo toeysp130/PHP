@@ -43,7 +43,6 @@
             </tr>
         </table>
         <input type="submit" value="เพิ่มข้อมูล" >
-
     </form>
 </body>
 </html>
