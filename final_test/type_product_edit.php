@@ -2,7 +2,7 @@
 
 use function PHPSTORM_META\type;
 
-$conn = new mysqli("localhost", "wat", "toey2543", "sellOnline");
+    include'connect.php';
     $id = $_REQUEST['id'];
     $sql_search = "SELECT * FROM `product_type` WHERE id_type = '$id'";
     $result = mysqli_query($conn,$sql_search);

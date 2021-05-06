@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "wat", "toey2543", "sellOnline");
+include'connect.php';
     $id = $_REQUEST['id'];
     $sql_search = "SELECT * FROM `product_list` WHERE productid = '$id'";
     $result = mysqli_query($conn,$sql_search);
@@ -15,6 +15,9 @@ $conn = new mysqli("localhost", "wat", "toey2543", "sellOnline");
         mysqli_query($conn,$sql_update);
         header("location: product.php");
     }
+
+    $sql_type = "SELECT * FROM `product_type`";
+    $result_type = mysqli_query($conn,$sql_type);
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,14 +59,9 @@ $conn = new mysqli("localhost", "wat", "toey2543", "sellOnline");
             <?php echo $result_ft['productid']?>
         </td>
         <td>
-            <select name="type_product" id="">
-                <option value="<?php echo $result_ft['typeid']?>"><?php echo $result_ft['typeid']?></option>
-                <option value="1001">มือถือ พร้อมแพ็กเกจ</option>
-                <option value="1002">แท็บเล็ต</option>
-                <option value="1003">อุปกรณ์เสริม ซิม</option>
-                <option value="1004">SIM Card</option>
-                <option value="1005">สินค้าอุ่นใจ</option>
-                <option value="1006">อุปกรณ์ IOT</option>
+            <select name="type_product" id=""><?php while($result_type_ft = mysqli_fetch_assoc($result_type)){?>
+                <option value="<?php echo $result_type_ft['id_type']?>"><?php echo $result_type_ft['name_type']?></option>
+                <?php }?>
             </select>
         </td>
         <td>
