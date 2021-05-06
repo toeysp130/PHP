@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<fieldset>
+<center><h1>อธิบายการทำงานของโปรแกรมการขายสินค้าออนไลน์</h1></center>
+<h3><p>1) 62-060216-1205-9   นายวัชรากรณ์  ชอบธรรม ตอนที่ 3 ลำดับที่ 4 </p></h3>
+<h3>2)ชื่อโปรแกรม:โปรแกรมการขายวินค้าออนไลน์</h3>
+<h3>3)ชื่อฐานข้อมูล:sellOnline</h3>
+<h3>4)ฐานข้อมูล sellnline ของโปรแกรม ประกอบด้วยตาราง ดังนี้ </h3>
+<pre> - ตารางประเภทสินค้า ประกอบด้วย attribute ดังนี้</pre>
+<table border="1" align="center">
+    <tr>
+        <td>#</td>
+        <td>Attribute Name</td>
+        <td>Detail</td>
+        <td>Data Type</td>
+        <td>Key</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>typeid</td>
+        <td>รหัสประเภทสินค้า</td>
+        <td>int</td>
+        <td>primary key</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>TypeName</td>
+        <td>ชื่อประเภทสินค้า</td>
+        <td>varchar(20)</td>
+        <td></td>
+        
+    </tr>
+</table>
+
+<pre> - ตารางสินค้า ประกอบด้วย attribute ดังนี้</pre>
+<table border="1" align="center">
+    <tr>
+        <td>#</td>
+        <td>Attribute Name</td>
+        <td>Detail</td>
+        <td>Data Type</td>
+        <td>Key</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>productId</td>
+        <td>รหัสสินค้า</td>
+        <td>int</td>
+        <td>primary key</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>typeId</td>
+        <td>รหัสประเภทสินค้า</td>
+        <td>int</td>
+        <td>foreign key</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>productName</td>
+        <td>ชื่อสินค้า</td>
+        <td>varchar(40)</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>quantity</td>
+        <td>จำนวนสินค้า</td>
+        <td>int</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>costPrice</td>
+        <td>ราคาทุน/หน่วย</td>
+        <td>float</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>SellPrice</td>
+        <td>ราคา/หน่วย</td>
+        <td>float</td>
+        <td></td>
+    </tr>
+</table>
+<h3>5) โปรแกรมสามารถทำงานได้ ดังนี้ <br>
+- ประเภทสินค้า สามารถ เพิ่ม แก้ไข ลบ ได้ <br>
+- สินค้า สามารถ เพิ่ม แก้ไข ลบ ได้
+</h3>
+
+</fieldset>
+</body>
+</html>
