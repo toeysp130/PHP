@@ -44,6 +44,7 @@
                         <th>แก้ไขข้อมูล</th>
                         <th>ลบข้อมูล</th>
                     </tr>
+                </thead>
                 <?php 
                     $count = 1;
                     while($result_ft = mysqli_fetch_assoc($result)){ 

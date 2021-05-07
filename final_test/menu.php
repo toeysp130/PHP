@@ -16,7 +16,7 @@
         <br>
         <a href="product.php"><h2>สินค้า</h2></a>
         <br>
-        <h2>รายงานสินค้าคงเหลือของแต่ละประเภท</h2>
+        <a href="report.php"><h2>รายงานสินค้าคงเหลือของแต่ละประเภท</h2></a>
         <br>
         <a href="discribeProgram.php"><h2>อธิบาย</h2></a>
     </center>
