@@ -18,6 +18,8 @@
         <br>
         <a href="report.php"><h2>รายงานสินค้าคงเหลือของแต่ละประเภท</h2></a>
         <br>
+        <a href="customer_login.php"><h2>หน้าลูกค้า</h2></a>
+        <br>
         <a href="discribeProgram.php"><h2>อธิบาย</h2></a>
     </center>
 </body>

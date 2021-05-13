@@ -1,6 +1,7 @@
 <?php 
     include'connect.php';
-    $sql_search = "SELECT product_list.productid , product_type.name_type , product_list.productName,product_list.quantity,product_list.costPrice,product_list.SellPrice FROM `product_list` INNER JOIN product_type on product_list.typeid = product_type.id_type";
+    $sql_search = "SELECT product_list.productid , product_type.name_type , product_list.productName,product_list.quantity,product_list.costPrice,product_list.SellPrice FROM `product_list` 
+    INNER JOIN product_type on product_list.typeid = product_type.id_type";
     $result = mysqli_query($conn,$sql_search);
     if(isset($_POST['new_product'])){
         $new_product = $_POST['new_product'];

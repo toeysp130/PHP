@@ -24,9 +24,6 @@
 <body>
     <div class="container-fluid">
         <div class="row mx-5">
-        <div class="col-12">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#search_cate">ค้นหา</button>     
-        </div>
             <?php 
             if(!isset($_POST['type_product'])){
                 $count_i = 0;
@@ -99,7 +96,7 @@
                     <thead class="thead ">
                         <tr class="table-primary">
                             <th colspan="6">
-                                <?php //echo $result_name_count['name_type_modal'];
+                                <?php 
                                 echo $_POST['type_product'];
                                 $name_search_modal = $_POST['type_product'];
                                 ?>
@@ -115,44 +112,37 @@
                         </tr>
                     </thead>
                     <?php 
-                        $count = 0;
+                        $count = 1;
                         $sql_of_cate = "SELECT product_list.productid , product_list.productName,
                         product_list.quantity,product_list.costPrice,product_list.SellPrice 
                         FROM `product_list` 
                         INNER JOIN product_type on product_list.typeid = product_type.id_type 
                         WHERE product_type.name_type = '$name_search_modal'";
                         $result_of_cate = mysqli_query($conn,$sql_of_cate);
-                        while($result_of_cate_ft = mysqli_fetch_array($result_of_cate)){
-                            if($count < 0){ $count++;?>
-                                <tbody>
-                                    <tr>
-                                        <th>
-                                            <?php echo $count ?>
-                                        </th>
-                                        <td>
-                                            <?php echo $result_of_cate_ft['productid'] ?>
-                                        </td>
-                                        <td>
-                                            <?php echo $result_of_cate_ft['productName'] ?>
-                                        </td>
-                                        <td>
-                                            <?php echo $result_of_cate_ft['quantity'] ?>
-                                        </td>
-                                        <td>
-                                            <?php echo $result_of_cate_ft['costPrice'] ?>
-                                        </td>
-                                        <td>
-                                            <?php echo $result_of_cate_ft['SellPrice'] ?>
-                                        </td>
-                                    </tr>
-                                <?php 
-                            } else if($count == 0){ ?>
-                                <tbody>
+                        while($result_of_cate_ft = mysqli_fetch_array($result_of_cate)){ ?>
+                            <tbody>
                                 <tr>
-                                    <td colspan="6"> ไม่มีข้อมูลสินค้าประเภท <?php echo $name_search_modal?></td>
+                                    <th>
+                                        <?php echo $count ?>
+                                    </th>
+                                    <td>
+                                        <?php echo $result_of_cate_ft['productid'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $result_of_cate_ft['productName'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $result_of_cate_ft['quantity'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $result_of_cate_ft['costPrice'] ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $result_of_cate_ft['SellPrice'] ?>
+                                    </td>
                                 </tr>
-                            <?php }?>
-                    </tbody>
+                        <?php $count++; } ?>
+                            </tbody>
                         <tr>
                             <td colspan="6" class="table-info">
                                 <?php 
@@ -162,7 +152,21 @@
                             </td>
                         </tr>
                 </table>
+                
+                
+                <div class="col-12 d-flex justify-content-center">
+                        <a  href="report.php" class="btn btn-outline-secondary">รายงานทั้งหมด</a>    
+                        <button type="button" class="btn btn-primary ml-2" data-toggle="modal" data-target="#search_cate">ค้นหา</button>     
+                </div>
             <?php  }?>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex justify-content-center">
+                <a href="menu.php" class="btn btn-outline-secondary">กลับหน้าเมนู</a>
+                    <button type="button" class="btn btn-info btn-lg btn-block" data-toggle="modal" data-target="#search_cate">ค้นหา</button> 
+                </div>
+            </div>
         </div>
     </div>
     <!-- popup เด้งค้นหาประเภท -->
